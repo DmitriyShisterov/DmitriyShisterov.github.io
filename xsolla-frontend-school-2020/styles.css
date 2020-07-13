@@ -1,0 +1,128 @@
+
+body {
+    font-family: Arial;
+}
+.wrapper{
+    margin: 0 auto;
+}
+
+
+.container-large {
+    padding: 100px 100px 80px 100px;
+    box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.12);
+    border-radius: 16px;
+    width: 1440px;
+}
+.h1, h1 {
+    font-family: Arial !important;
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 66px;
+    /* margin: 0px 0px 40px 0px!important; */
+}
+.inputsBoxWrap {
+    display: flex;
+    justify-content: flex-start;
+    margin: 40px 0;
+}
+.inputBox {
+    display: flex;
+    align-items: center;
+}
+.inputBox > label {
+    font-size:24px;
+}
+select {
+    background-color: #fff;
+    background-image: linear-gradient(45deg, transparent 50%, #bdbdbd 50%),linear-gradient(135deg, #bdbdbd 50%, transparent 50%),linear-gradient(to right, #bdbdbd00, #bdbdbd00);
+    background-position: calc(100% - 20px) calc(1em + 2px),calc(100% - 15px) calc(1em + 2px),calc(100% - 2.5em) 0.5em;
+    background-size: 0 !important;
+    background-repeat: no-repeat;
+    padding-right: 30px;
+}
+input:focus, select:focus, fieldset:focus {
+    outline: none;
+    border-color: #2e282c !important;
+}
+.inputBox select{
+    width: 200px;
+    height: 50px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    border: 1px solid #444;
+    font-size: 24px;
+    padding: 9px 50px 9px 20px;
+    line-height: 33px;
+    font-weight: 500;
+    font-family: Arial;
+}
+
+.inputsBoxWrap div:last-child {
+    margin-left: 35px;
+}
+
+.inputBox label {
+    margin-right: 20px;
+}
+/*Grid*/
+.wrapperFlex {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+   
+}
+.row {
+    
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    height: 400px;
+    justify-content: space-between !important;
+}
+
+.one {
+    background: url(https://cdn3.xsolla.com/files/uploaded/113250/b1f06edaf618c3e3ad19c159eb5aa036.jpeg);   
+}
+.two {
+    background: url(https://cdn3.xsolla.com/files/uploaded/113250/826adbf1a19ba19e6ba9af9308d2b309.png);
+}
+.three {
+    background: url(https://cdn3.xsolla.com/files/uploaded/113250/aec8583caa5bbe34b2c5695e2546ea3b.jpeg);
+
+}
+.four {
+    background: url(https://cdn3.xsolla.com/files/uploaded/113250/0662c0df7663f71831e83be091228413.jpeg);
+}
+.item {
+    background-size: cover;
+    border-radius: 6px;
+    height: 400px;
+    width: calc(50% - 20px);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.flexTwo {
+    margin-top: 40px !important;
+}
+ 
+.date {
+    width: 80px;
+    height: 80px;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 6px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+}
+.eventTitle {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 66px;
+    color: #FFFFFF;
+}
