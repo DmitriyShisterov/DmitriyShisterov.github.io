@@ -1,0 +1,160 @@
+body{
+  background-color: #cfd0cf;
+  color: #434344;
+  min-width: 1000px;
+  width: 100%;
+}
+
+.title{
+  font-family: 'Arial';
+  text-align: center;
+  font-size: 42px;
+  line-height: 47px;
+  margin: 40px auto;
+}
+
+.container{
+  position: absolute;
+  min-width: 1000px;
+  width: 100%;
+  min-height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.card{
+  display: inline-block;
+  perspective: 600px;
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin-right: 35px;
+  margin-bottom: 35px;
+}
+
+.row .card:last-child{
+  margin-right: 0;
+}
+
+.front,
+.back{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transition: .5s;
+  backface-visibility: hidden;
+  font-size: 75px;
+}
+
+.front{
+  border: 5px solid white;
+  border-radius: 9px;
+  background: linear-gradient(45deg,#22ab93 25%,#19668d );
+}
+
+.row{
+  width: 595px;
+  margin: auto;
+  margin-bottom: 0;
+}
+
+.smile{
+  width: 100%;
+  height: 120px;
+  text-align: center;
+  line-height: 120px;
+  vertical-align: middle;
+}
+
+.back{
+  border: 5px solid white;
+  transform: rotateY(180deg);
+  background: white;
+  border-radius: 9px;
+}
+
+.isOpen{
+
+}
+
+.isOpenRight .back{
+  background-color: #5ad66f;
+  border-color: #5ad66f;
+}
+
+.isOpenWrong .back{
+  background-color: #f44336;
+  border-color: #f44336;
+}
+
+.timer{
+  margin: 5px auto;
+  width: 595px;
+  text-align: center;
+  font-family: 'Arial';
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 36px;
+}
+
+.modal{
+  display: none;
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+  transition: .5s all;
+}
+
+.modal-content{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 350px;
+  width: 30%;
+  background-color: white;
+  margin: auto;
+  transition: .5s all;
+}
+
+.modal-title{
+  margin: auto;
+  width: 80px;
+  font-size: 48px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.btn{
+  display: block;
+  box-shadow: 1px 1px 1px #434344;
+  padding-left: 30;
+  padding-right: 30;
+  height: 40px;
+  margin:auto;
+  margin-bottom: 30px;
+  border-radius: 9px;
+  background: linear-gradient(45deg,#19668d 15%,#22ab93);
+  color: white;
+}
+
+.btn span{
+  font-size: 20px;
+}
+
+.btn:active{
+  box-shadow: 2px 1px 8px #434344;
+}
