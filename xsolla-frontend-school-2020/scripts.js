@@ -30,32 +30,32 @@ function evling(params) {
                 let fullDate = x[i].date;
                 let img = x[i].image;
 
-                let event = document.createElement('div'); // создаем событие
+                let event = document.createElement('div');
                 event.className = 'event';
                 event.style.backgroundImage = `url(${img})`;
                 console.log()
 
-                let dateBookmark = document.createElement('div');// создаем date&bookmark
+                let dateBookmark = document.createElement('div');
                 dateBookmark.className = 'dateBookmark';
 
-                let dates = document.createElement('div');// создаем  date
+                let dates = document.createElement('div');
                 dates.className = 'date';
                 date = fullDate.slice(0, 2);
                 dates.innerText = date;
 
-                let bookmark = document.createElement('div');// создаем bookmark
+                let bookmark = document.createElement('div');
                 bookmark.className = 'bookmark';
 
-                let eventTitle = document.createElement('div');// создаем eventTitle
+                let eventTitle = document.createElement('div');
                 eventTitle.className = 'eventTitle';
                 eventTitle.innerText = name;
 
-                dateBookmark.append(dates, bookmark);// добавляем к date&bookmark(date,bookmark)
-                event.append(dateBookmark, eventTitle);// добавляем к event(datebookmark, eventTitle)*/
+                dateBookmark.append(dates, bookmark);
+                event.append(dateBookmark, eventTitle);
                 eventsWrap.append(event);
             }
         } else {
-            let error = document.createElement('div'); // создаем событие
+            let error = document.createElement('div');
             error.className = 'event';
             error.classList.add('error');
             error.style.border = '1px solid #444';
@@ -66,9 +66,9 @@ function evling(params) {
     }
 
     eventsWrap.onclick = function (event) {
-        let bk = event.target.closest('.bookmark'); // (1)
-        if (!bk) return; // (2)
-        if (!eventsWrap.contains(bk)) return; // (3)
+        let bk = event.target.closest('.bookmark');
+        if (!bk) return;
+        if (!eventsWrap.contains(bk)) return;
         if (!bk.classList.contains('checked')) {
             bk.classList.toggle('checked', true)
         } else {
@@ -120,11 +120,11 @@ function evling(params) {
                 }
                 render(sortEvl);
                 console.log(sortEvl);
-            } else { //  первый этап
+            } else {
                 newEvl = [];
                 evl.forEach(function (evt, i, evl) {
                     let month;
-                    if (event.target.className === 'month') {// привели дату к нормальному формату
+                    if (event.target.className === 'month') {
                         month = evt.date.slice(3, 5)
                     }
                     if (evt.city === value || month === value) {
