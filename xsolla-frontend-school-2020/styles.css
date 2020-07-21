@@ -1,42 +1,60 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 
 body {
     font-family: Arial;
 }
 .wrapper{
-    margin: 0 auto;
-}
-
-
-.container-large {
+    display: flex;
+    width: 100%;
+    justify-content: center;
     padding: 100px 100px 80px 100px;
-    box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.12);
-    border-radius: 16px;
-    width: 1440px;
+    width: 100%;
+    flex-direction: column;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 .h1, h1 {
     font-family: Arial !important;
     font-size: 48px;
     font-weight: 800;
     line-height: 66px;
-    /* margin: 0px 0px 40px 0px!important; */
 }
 .inputsBoxWrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
-    margin: 40px 0;
+    margin: 40px 0 40px 10px;
+    width: 50%;
 }
 .inputBox {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    justify-content: space-around;
+    /* flex: 1; */
 }
 .inputBox > label {
     font-size:24px;
+    margin-right: 20px;
 }
 select {
     background-color: #fff;
+    background-image: -o-linear-gradient(45deg, transparent 50%, #bdbdbd 50%),-o-linear-gradient(315deg, #bdbdbd 50%, transparent 50%),-o-linear-gradient(left, #bdbdbd00, #bdbdbd00);
     background-image: linear-gradient(45deg, transparent 50%, #bdbdbd 50%),linear-gradient(135deg, #bdbdbd 50%, transparent 50%),linear-gradient(to right, #bdbdbd00, #bdbdbd00);
     background-position: calc(100% - 20px) calc(1em + 2px),calc(100% - 15px) calc(1em + 2px),calc(100% - 2.5em) 0.5em;
-    background-size: 0 !important;
+    background-size: 0px !important;
     background-repeat: no-repeat;
     padding-right: 30px;
 }
@@ -47,6 +65,7 @@ input:focus, select:focus, fieldset:focus {
 .inputBox select{
     width: 200px;
     height: 50px;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border-radius: 6px;
     border: 1px solid #444;
@@ -54,62 +73,54 @@ input:focus, select:focus, fieldset:focus {
     padding: 9px 50px 9px 20px;
     line-height: 33px;
     font-weight: 500;
+    z-index: 5;
     font-family: Arial;
+    background-color: transparent;
+}
+.selectCaret {
+    width: 20px;
+    height: 20px;
+    background-image: url(src/down-arrow.svg);
+    background-size: cover;
+    left: -35px;
+    position: relative;
+    z-index: 0;
+  }
+  div.inputBox:nth-child(2) {
+    margin-left: 20px;
 }
 
-.inputsBoxWrap div:last-child {
-    margin-left: 35px;
-}
-
-.inputBox label {
-    margin-right: 20px;
-}
-/*Grid*/
-.wrapperFlex {
+.eventsWrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    width: 100%;
-   
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
 }
-.row {
-    
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-    height: 400px;
-    justify-content: space-between !important;
-}
-
-.one {
-    background: url(https://cdn3.xsolla.com/files/uploaded/113250/b1f06edaf618c3e3ad19c159eb5aa036.jpeg);   
-}
-.two {
-    background: url(https://cdn3.xsolla.com/files/uploaded/113250/826adbf1a19ba19e6ba9af9308d2b309.png);
-}
-.three {
-    background: url(https://cdn3.xsolla.com/files/uploaded/113250/aec8583caa5bbe34b2c5695e2546ea3b.jpeg);
-
-}
-.four {
-    background: url(https://cdn3.xsolla.com/files/uploaded/113250/0662c0df7663f71831e83be091228413.jpeg);
-}
-.item {
+.event {
     background-size: cover;
     border-radius: 6px;
     height: 400px;
     width: calc(50% - 20px);
+    width: -webkit-calc(50% - 20px);
     padding: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    margin: 10px;
 }
-.flexTwo {
-    margin-top: 40px !important;
-}
- 
 .date {
     width: 80px;
     height: 80px;
     border: 2px solid #FFFFFF;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border-radius: 6px;
     font-style: normal;
@@ -119,10 +130,135 @@ input:focus, select:focus, fieldset:focus {
     text-align: center;
     vertical-align: middle;
 }
+.dateBookmark {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+.bookmark{
+    height: 18px;
+    width: 18px;
+    background: url(src/bookmark.svg);
+    background-size: cover;
+}
+.bookmark.checked {
+    background: url(src/bookmarkWhite.svg);
+    background-size: cover;
+}
 .eventTitle {
     font-style: normal;
     font-weight: 800;
     font-size: 48px;
     line-height: 66px;
     color: #FFFFFF;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
+.event.error {
+    font-size: 24px;
+    height: auto;
+}
+
+@media (max-width: 567px) {
+    .wrapper {
+        padding: 60px 20px 40px 20px;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+    .inputBox {
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .inputsBoxWrap {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        margin: 30px 0 50px 0;
+    }
+    .inputBox > label {
+        font-size: 16px;
+        margin: 0 0 5px 0;
+    }
+    .inputBox select {
+        width: 100%;
+        font-size: 16px;
+        padding: 5px 50px 5px 20px;
+        height: 40px;
+    }
+    div.inputBox:nth-child(2) {
+        margin-left: 0;
+    }
+    .selectCaret {
+        width: 20px;
+        height: 20px;
+        left: 135px;
+        top: -30px;
+    }
+    .eventsWrap {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .event {
+        margin: 0px 0px 10px 0px;
+        background-size: cover;
+        border-radius: 6px;
+        width: 100%;
+        height: 200px;
+        padding: 20px;
+        
+    }
+    .date {
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+    }
+    .eventTitle {
+        font-size: 24px;
+        line-height: 33px;
+        white-space: break-spaces;
+    }
+    .event.error {
+        font-size: 20px;
+    }
+  }
+
+  @media (min-width: 567px) and (max-width:1024px){
+    .wrapper {
+        padding: 100px 40px 80px 40px;
+    } 
+    .inputBox select {
+        width: 100%;
+        }
+    .inputsBoxWrap {
+        width: 100%;
+        }
+    .event {
+        margin: 0px 0px 10px 0px;
+        background-size: cover;
+        border-radius: 6px;
+        margin: 10px;
+    }
+    .event.error {
+        font-size: 22px;
+        height: auto;
+    } 
+    .selectCaret {
+    width: 35px;
+    height: 35px;
+  }  
+  }
+ 
+
